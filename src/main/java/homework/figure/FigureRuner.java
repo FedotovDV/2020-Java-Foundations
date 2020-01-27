@@ -21,6 +21,7 @@ public class FigureRuner {
             System.out.println("Square = " + figureArrayList.get(i).calcSquare());
             System.out.println("Perimetr = " + figureArrayList.get(i).calcPerimetr());
             System.out.println();
+            System.out.println();
         }
 
     }
