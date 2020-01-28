@@ -21,8 +21,8 @@ public class Rectangl extends Figure {
     }
 
     @Override
-    public void toStringFigureDescription() {
-        System.out.println("Rectangl shape created with length :" + length + " and width :" + width);
+    public  String toString() {
+        return("Rectangl shape created with length :" + length + " and width :" + width);
     }
 
 }

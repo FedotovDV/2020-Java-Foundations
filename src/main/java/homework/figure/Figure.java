@@ -6,6 +6,8 @@ public abstract class Figure {
 
     abstract double calcPerimetr();
 
-    abstract void toStringFigureDescription();
-
+    @Override
+    public String toString() {
+        return "Figure";
+    }
 }
