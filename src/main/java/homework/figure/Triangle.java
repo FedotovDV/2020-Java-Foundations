@@ -13,10 +13,7 @@ public class Triangle extends Figure {
     }
 
     private boolean checkTriangle() {
-        if ((sideA + sideB > sideC) && (sideA + sideC > sideB) && (sideC + sideB > sideA)) {
-            return true;
-        }
-        return false;
+        return (sideA + sideB > sideC) && (sideA + sideC > sideB) && (sideC + sideB > sideA);
     }
 
     @Override
@@ -36,11 +33,11 @@ public class Triangle extends Figure {
     }
 
     @Override
-    public void toStringFigureDescription() {
+    public  String toString() {
         if (checkTriangle()) {
-            System.out.println("Triangle shape created with sides :" + sideA + " : " + sideB + " : " + sideC);
+            return("Triangle shape created with sides :" + sideA + " : " + sideB + " : " + sideC);
         } else {
-            System.out.println("\u001B[31mA triangle with sides " + sideA + " : " + sideB + " : " + sideC + " cannot be created!\u001B[0m");
+            return("\u001B[31mA triangle with sides " + sideA + " : " + sideB + " : " + sideC + " cannot be created!\u001B[0m");
         }
 
     }
