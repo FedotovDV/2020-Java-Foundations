@@ -5,14 +5,14 @@ import java.util.Objects;
 public class Man {
     private String name;
     private double age;
-    private double haight;
+    private double height;
     private double weight;
     private String telephone;
 
-    public Man(String name, double age, double haight, double weight, String telephone) {
+    public Man(String name, double age, double height, double weight, String telephone) {
         this.name = name;
         this.age = age;
-        this.haight = haight;
+        this.height = height;
         this.weight = weight;
         this.telephone = telephone;
     }
@@ -23,7 +23,7 @@ public class Man {
         if (o == null || getClass() != o.getClass()) return false;
         Man man = (Man) o;
         return Double.compare(man.age, age) == 0 &&
-                Double.compare(man.haight, haight) == 0 &&
+                Double.compare(man.height, height) == 0 &&
                 Double.compare(man.weight, weight) == 0 &&
                 Objects.equals(name, man.name) &&
                 Objects.equals(telephone, man.telephone);
@@ -31,6 +31,6 @@ public class Man {
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, age, haight, weight, telephone);
+        return Objects.hash(name, age, height, weight, telephone);
     }
 }

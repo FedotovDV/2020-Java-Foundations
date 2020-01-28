@@ -10,10 +10,10 @@ public class Woman {
     private double weight;
     private String telephone;
 
-    public Woman(String name, double age, double haight, double weight, String telephone) {
+    public Woman(String name, double age, double height, double weight, String telephone) {
         this.name = name;
         this.age = age;
-        this.haight = haight;
+        this.haight = height;
         this.weight = weight;
         this.telephone = telephone;
     }
@@ -23,15 +23,39 @@ public class Woman {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Woman woman = (Woman) o;
-        return Double.compare(woman.age, age) == 0 &&
-                Double.compare(woman.haight, haight) == 0 &&
-                Double.compare(woman.weight, weight) == 0 &&
-                Objects.equals(name, woman.name) &&
-                Objects.equals(telephone, woman.telephone);
+        if(name == null){
+            if(woman.name != null) return false;
+        } else {
+            if(!name.equals(woman.name)) return false;
+        }
+        if(age != woman.age) return false;
+        if(haight != woman.haight) return false;
+        if(weight != woman.weight) return false;
+        if(telephone == null){
+            return woman.telephone == null;
+        } else {
+            return telephone.equals(woman.telephone);
+        }
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, age, haight, weight, telephone);
+        int result = 1;
+        result = 31 * result + (int)(age + haight + weight);
+        result += ((name==null)?0:name.hashCode());
+        result += ((telephone==null)?0:telephone.hashCode());
+        return result;
+
+    }
+
+    @Override
+    public String toString() {
+        return "Woman{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", haight=" + haight +
+                ", weight=" + weight +
+                ", telephone='" + telephone + '\'' +
+                '}';
     }
 }
