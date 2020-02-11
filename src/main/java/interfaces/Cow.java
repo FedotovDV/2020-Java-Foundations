@@ -4,7 +4,7 @@ public class Cow extends SuperCow implements Talkable {
 
     @Override
     public void talk() {
-        System.out.println("Muuuu");
+        System.out.println("class Cow extends SuperCow: Muuuu");
     }
 
     @Override
