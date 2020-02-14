@@ -3,9 +3,17 @@ package homework.figure;
 public class Circle extends Figure {
 
     public static final double PI = 3.14;
-    double radius;
+    private double radius;
 
     public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
         this.radius = radius;
     }
 
