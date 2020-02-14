@@ -9,21 +9,9 @@ public class Palindromes {
     }
 
     public boolean isPalindrome() {
-        String stringTemp = stringOrigin.trim().toLowerCase().
-                replace(",", "").
-                replace("'", "").
-                replace("?", "").
-                replace("!", "").
-                replace(".", "");
-        String[] stringStrip = stringTemp.split(" ");
-        StringBuilder stringBuilderSplit = new StringBuilder();
-        for (String word : stringStrip) {
-            stringBuilderSplit.append(word);
-        }
-        stringTemp = new String(stringBuilderSplit);
+        String stringTemp = stringOrigin.trim().replaceAll("\\W", "");
         StringBuilder stringBuilderOrigin = new StringBuilder(stringTemp);
-        String stringReverse = new String(stringBuilderOrigin.reverse());
-        return stringTemp.equals(stringReverse);
+        return stringTemp.equalsIgnoreCase(new String(stringBuilderOrigin.reverse()));
     }
 
     @Override
