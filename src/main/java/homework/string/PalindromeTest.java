@@ -8,14 +8,14 @@ public class PalindromeTest {
         for (Palindromes palindrome : palindromes) {
             printPalindrome(palindrome);
         }
-
     }
 
     private static void printPalindrome(Palindromes stringOrigin1) {
-        System.out.println(stringOrigin1.toString() + " is palindrome ? -" + (stringOrigin1.isPalindrome() ? "Yes" : "No"));
+        System.out.printf("%-50s     is palindrome ? -       %-20s\n", stringOrigin1.toString() , (stringOrigin1.isPalindrome() ? "Yes" : "No"));
     }
+
     private static Palindromes[] getPalindromes(){
-        Palindromes palindromes1  = new Palindromes("Don't nod. ");
+        Palindromes palindromes1  = new Palindromes("Don't nod.   ");
         Palindromes palindromes2  = new Palindromes("I did, did I? ");
         Palindromes palindromes3  = new Palindromes("My gym ");
         Palindromes palindromes4  = new Palindromes("Red rum, sir, is murder  ");
