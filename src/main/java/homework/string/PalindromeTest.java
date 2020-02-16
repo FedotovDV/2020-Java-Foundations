@@ -3,7 +3,7 @@ package homework.string;
 public class PalindromeTest {
     public static void main(String[] args) {
 
-        Palindromes[] palindromes = getPalindromes();
+        Palindromes[] palindromes = insertPalindromesInArray();
 
         for (Palindromes palindrome : palindromes) {
             printPalindrome(palindrome);
@@ -14,7 +14,7 @@ public class PalindromeTest {
         System.out.printf("%-50s     is palindrome ? -       %-20s\n", stringOrigin1.toString() , (stringOrigin1.isPalindrome() ? "Yes" : "No"));
     }
 
-    private static Palindromes[] getPalindromes(){
+    private static Palindromes[] insertPalindromesInArray(){
         Palindromes palindromes1  = new Palindromes("Don't nod.   ");
         Palindromes palindromes2  = new Palindromes("I did, did I? ");
         Palindromes palindromes3  = new Palindromes("My gym ");
