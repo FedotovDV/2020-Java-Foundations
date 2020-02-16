@@ -7,14 +7,11 @@ public class PersonColletions {
 
     public static void main(String[] args) {
         List<Person> allPeople = insertPeopleInList();
-        System.out.println("Вернуть всех военнообязанных мужчин (пол), которым меньше 27 и больше 18 и имя которых начинается на Н");
-        for (Person person : allPeople) {
-            if (person.getAge() < 27 && person.getAge() > 18
-                    && person.getGender() == EnumGender.MALE
-                    && person.getName().charAt(0) == 'N') {
-                System.out.println(person.toString());
-            }
-        }
+        searchForMilitaryMen(allPeople);
+        middleAgeSearch(allPeople);
+    }
+
+    private static void middleAgeSearch(List<Person> allPeople) {
         System.out.println("\nНайти средний возраст всех женщин.");
         int allAge = 0;
         int count = 0;
@@ -25,6 +22,17 @@ public class PersonColletions {
             }
         }
         System.out.println("Cредний возраст всех женщин = " + (allAge / count));
+    }
+
+    private static void searchForMilitaryMen(List<Person> allPeople) {
+        System.out.println("Вернуть всех военнообязанных мужчин (пол), которым меньше 27 и больше 18 и имя которых начинается на Н");
+        for (Person person : allPeople) {
+            if (person.getAge() < 27 && person.getAge() > 18
+                    && person.getGender() == EnumGender.MALE
+                    && person.getName().charAt(0) == 'N') {
+                System.out.println(person.toString());
+            }
+        }
     }
 
     private static ArrayList<Person> insertPeopleInList() {
