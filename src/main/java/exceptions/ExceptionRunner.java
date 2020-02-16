@@ -2,7 +2,7 @@ package exceptions;
 
 import interfaces.Cat;
 
-public class ExceptionRuner {
+public class ExceptionRunner {
     public static void main(String[] args) {
 //        try {
 //            Cat cat = new Cat();
