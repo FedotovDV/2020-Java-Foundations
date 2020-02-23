@@ -11,7 +11,11 @@ public class MyLinkedListRunner {
         myLinkedList.add(3);
         myLinkedList.add(4);
         myLinkedList.add(5);
-        myLinkedList.remove((Integer) 5);
+        System.out.println(myLinkedList.get(3).getValue());
+//        myLinkedList.remove((Integer) 5);
+        myLinkedList.remove(0);
+        System.out.println(myLinkedList.toString());
+        myLinkedList.clear();
         System.out.println(myLinkedList.toString());
 
     }

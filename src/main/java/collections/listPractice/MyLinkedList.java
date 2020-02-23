@@ -64,21 +64,25 @@ public class MyLinkedList<T> {
     public boolean remove(T t) {
         Node<T> curNode = start;
         Node<T> prevNode = null;
+
         while (curNode != null) {
             if (curNode.getValue().equals(t)) {
                 if (curNode.getNext() != null && prevNode != null) {
                     prevNode.setNext(curNode.getNext());
                     curNode.setPrevious(prevNode);
+                    size--;
                     return true;
                 } else if (prevNode == null) {
                     curNode = curNode.getNext();
                     curNode.setPrevious(null);
                     start = curNode;
+                    size--;
                     return true;
                 } else {
                     curNode = prevNode;
                     curNode.setNext(null);
                     end = curNode;
+                    size--;
                     return true;
                 }
             }
@@ -104,11 +108,18 @@ public class MyLinkedList<T> {
 
 
     public void clear() {
-
+        start = end = null;
     }
 
-    public Object get(int index) {
-        return null;
+    public Node<T> get(int index) {
+        Node<T> node = start;
+        if (index < 0 || index > size - 1) {
+            throw new IndexOutOfBoundsException("Wrong index: " + index);
+        }
+        for (int i = 0; i < index; i++) {
+            node = node.getNext();
+        }
+        return node;
     }
 
 
@@ -122,8 +133,27 @@ public class MyLinkedList<T> {
     }
 
 
-    public Object remove(int index) {
-        return null;
+    public Node<T> remove(int index) {
+        Node<T> currNode = get(index);
+        Node<T> nextNode = currNode.getNext();
+        Node<T> prevNode = currNode.getPrevious();
+        if (nextNode != null) {
+            nextNode.setPrevious(prevNode);
+            if (prevNode == null) {
+                start = nextNode;
+            }
+        }
+        if (prevNode != null) {
+            prevNode.setNext(nextNode);
+            if (nextNode == null) {
+                end = prevNode;
+            }
+        }
+        size--;
+        if (size == 0) {
+            start = end = null;
+        }
+        return currNode;
     }
 
     public int indexOf(Object o) {
