@@ -62,35 +62,17 @@ public class MyLinkedList<T> {
 
 
     public boolean remove(T t) {
-        Node<T> curNode = start;
-        Node<T> prevNode = null;
-
-        while (curNode != null) {
-            if (curNode.getValue().equals(t)) {
-                if (curNode.getNext() != null && prevNode != null) {
-                    prevNode.setNext(curNode.getNext());
-                    curNode.setPrevious(prevNode);
-                    size--;
-                    return true;
-                } else if (prevNode == null) {
-                    curNode = curNode.getNext();
-                    curNode.setPrevious(null);
-                    start = curNode;
-                    size--;
-                    return true;
-                } else {
-                    curNode = prevNode;
-                    curNode.setNext(null);
-                    end = curNode;
-                    size--;
-                    return true;
-                }
+        Node<T> currNode = start;
+        for (int i = 0; i < size; i++) {
+            if (currNode.getValue().equals(t)) {
+                remove(i);
+                return true;
             }
-            prevNode = curNode;
-            curNode = curNode.getNext();
+            currNode = currNode.getNext();
         }
         return false;
     }
+
 
 
     public boolean containsAll(Collection c) {
