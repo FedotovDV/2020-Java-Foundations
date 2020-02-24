@@ -1,4 +1,4 @@
-package collections.listPractice;
+package collections.listPractice.myLinkedList;
 
 public class Node<T> {
     private T value;

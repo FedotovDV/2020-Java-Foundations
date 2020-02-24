@@ -1,4 +1,7 @@
-package collections.listPractice;
+package collections.listPractice.person;
+
+import collections.listPractice.person.EnumGender;
+import collections.listPractice.person.Person;
 
 import java.util.*;
 

@@ -1,7 +1,7 @@
-package collections.listPractice;
+package collections.listPractice.myLinkedList;
 
 
-import java.util.*;
+import collections.listPractice.myLinkedList.Node;
 
 public class MyLinkedList<T> {
 

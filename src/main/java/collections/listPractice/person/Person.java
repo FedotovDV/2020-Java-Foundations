@@ -1,4 +1,4 @@
-package collections.listPractice;
+package collections.listPractice.person;
 
 import exceptions.WrongAgeException;
 import homework.interfaces.Learnable;

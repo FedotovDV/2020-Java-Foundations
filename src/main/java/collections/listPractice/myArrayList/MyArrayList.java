@@ -1,4 +1,4 @@
-package collections.listPractice;
+package collections.listPractice.myArrayList;
 
 
 import testing.Collections;

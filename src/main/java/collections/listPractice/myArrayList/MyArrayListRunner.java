@@ -1,10 +1,9 @@
-package collections.listPractice;
+package collections.listPractice.myArrayList;
 
+import collections.listPractice.myArrayList.MyArrayList;
 import objectPractice.Cake;
 
-import java.util.*;
-
-public class MyListRunner {
+public class MyArrayListRunner {
     public static void main(String[] args) {
         MyArrayList list = new MyArrayList();
         System.out.println("list.size() = " + list.size());

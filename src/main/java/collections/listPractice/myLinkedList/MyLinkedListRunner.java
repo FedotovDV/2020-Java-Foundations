@@ -1,7 +1,8 @@
-package collections.listPractice;
+package collections.listPractice.myLinkedList;
+
+import collections.listPractice.myLinkedList.MyLinkedList;
 
 import java.util.Arrays;
-import java.util.LinkedList;
 
 public class MyLinkedListRunner {
     public static void main(String[] args) {

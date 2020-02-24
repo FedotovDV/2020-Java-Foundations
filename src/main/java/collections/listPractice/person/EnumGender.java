@@ -1,4 +1,4 @@
-package collections.listPractice;
+package collections.listPractice.person;
 
 public enum EnumGender {
     MALE("male"), FEMALE("female");
