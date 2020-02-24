@@ -1,6 +1,8 @@
 package collections.listPractice;
 
 
+import testing.Collections;
+
 import java.util.*;
 import java.util.function.UnaryOperator;
 
@@ -39,10 +41,6 @@ public class MyArrayList<T> {
     }
 
 
-    public Iterator iterator() {
-        return null;
-    }
-
     public T[] toArray() {
         return Arrays.copyOf(array, size);
     }
@@ -69,44 +67,24 @@ public class MyArrayList<T> {
     }
 
 
-    public boolean remove(T t) {
-        T[] tempArray = (T[]) new Object[array.length];
-        int index = 0;
-        int count = 0;
+    @Override
+    public String toString() {
+        StringBuilder result = new StringBuilder("MyArrayList{\n");
         for (int i = 0; i < size; i++) {
-            if (array[i].equals(t) && count < 1) {
-                count++;
-            } else {
-                tempArray[index++] = array[i];
+            result.append("[").append(i).append(array[i].toString()).append("]\n");
+        }
+        result.append("}");
+        return result.toString();
+    }
+
+    public boolean remove(T t) {
+        for (int i = 0; i < size; i++) {
+            if (array[i].equals(t)) {
+                remove(i);
+                size--;
+                return true;
             }
         }
-        array = tempArray;
-        size--;
-        return true;
-    }
-
-
-    public boolean containsAll(Collection c) {
-        return false;
-    }
-
-
-    public boolean addAll(Collection c) {
-        return false;
-    }
-
-
-    public boolean addAll(int index, Collection c) {
-        return false;
-    }
-
-
-    public boolean removeAll(Collection c) {
-        return false;
-    }
-
-
-    public boolean retainAll(Collection c) {
         return false;
     }
 
@@ -138,16 +116,14 @@ public class MyArrayList<T> {
     public void add(int index, T element) {
         if (index >= size) {
             throw new IndexOutOfBoundsException("Wrong index: " + index);
-        }else  if (array.length == size) {
+        } else if (array.length == size) {
             resizeArray();
         }
-        for (int i = size-1; i > index; i--) {
-            array[i+1] = array[i];
+        for (int i = size - 1; i > index; i--) {
+            array[i + 1] = array[i];
         }
-        array[index]=element;
+        array[index] = element;
         size++;
-
-
     }
 
 
@@ -158,57 +134,28 @@ public class MyArrayList<T> {
         }
         array[--size] = null;
         return oldValue;
-
     }
 
 
-    public int indexOf(Object o) {
-        return 0;
-    }
-
-
-    public int lastIndexOf(Object o) {
-        return 0;
-    }
-
-
-    public ListIterator listIterator() {
-        return null;
-    }
-
-
-    public ListIterator listIterator(int index) {
-        return null;
-    }
-
-
-    public List subList(int fromIndex, int toIndex) {
-        return null;
-    }
-
-
-    public void replaceAll(UnaryOperator operator) {
-
-    }
-
-
-    public void sort(Comparator c) {
-
-    }
-
-
-    public Spliterator spliterator() {
-        return null;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder result = new StringBuilder("MyArrayList{\n");
+    public int indexOf(T t) {
         for (int i = 0; i < size; i++) {
-            result.append("[").append(i).append(array[i].toString()).append("]\n");
+            if (array[i].equals(t)) {
+                return i;
+            }
         }
-        result.append("}");
-        return result.toString();
+        return -1;
     }
+
+
+    public int lastIndexOf(T t) {
+        for (int i = size - 1; i > 0; i--) {
+            if (array[i].equals(t)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+
 }
 

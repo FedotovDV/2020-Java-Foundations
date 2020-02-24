@@ -43,9 +43,15 @@ public class MyLinkedList<T> {
     }
 
     public Object[] toArray() {
-        return new Object[0];
+        Object[] result = new Object[size];
+        Node<T> node = start;
+        int i = 0;
+        while (node != null) {
+            result[i++] = node.getValue();
+            node = node.getNext();
+        }
+        return result;
     }
-
 
     public boolean add(T t) {
         Node<T> node = new Node<>(t, null, null);
@@ -73,24 +79,9 @@ public class MyLinkedList<T> {
         return false;
     }
 
-
-
-    public boolean containsAll(Collection c) {
-        return false;
-    }
-
-
-    public boolean addAll(Collection c) {
-        return false;
-    }
-
-    public boolean removeAll(Collection c) {
-        return false;
-    }
-
-
     public void clear() {
         start = end = null;
+        size = 0;
     }
 
     public Node<T> get(int index) {
@@ -105,13 +96,36 @@ public class MyLinkedList<T> {
     }
 
 
-    public Object set(int index, Object element) {
-        return null;
+    public Node<T> set(int index, T t) {
+        Node<T> node = start;
+        if (index < 0 || index > size - 1) {
+            throw new IndexOutOfBoundsException("Wrong index: " + index);
+        }
+        for (int i = 0; i < index; i++) {
+            node = node.getNext();
+        }
+        node.setValue(t);
+        return node;
     }
 
 
-    public void add(int index, Object element) {
-
+    public void add(int index, T t) {
+        Node<T> currNode = start;
+        if (index < 0 || index > size - 1) {
+            throw new IndexOutOfBoundsException("Wrong index: " + index);
+        }
+        for (int i = 0; i < index; i++) {
+            currNode = currNode.getNext();
+        }
+        Node<T> prevNode = currNode.getPrevious();
+        Node<T> addNode = new Node<>(t, currNode, prevNode);
+        currNode.setPrevious(addNode);
+        if (prevNode == null) {
+            start = addNode;
+        } else {
+            prevNode.setNext(addNode);
+        }
+        size++;
     }
 
 
@@ -138,16 +152,26 @@ public class MyLinkedList<T> {
         return currNode;
     }
 
-    public int indexOf(Object o) {
-        return 0;
+    public int indexOf(T t) {
+        Node<T> node = start;
+        for (int i = 0; i < size; i++) {
+            if (node.getValue().equals(t)) {
+                return i;
+            }
+            node = node.getNext();
+        }
+        return -1;
     }
 
-    public int lastIndexOf(Object o) {
-        return 0;
-    }
-
-    public List subList(int fromIndex, int toIndex) {
-        return null;
+    public int lastIndexOf(T t) {
+        Node<T> node = end;
+        for (int i = size - 1; i > 0; i--) {
+            if (node.getValue().equals(t)) {
+                return i;
+            }
+            node = node.getPrevious();
+        }
+        return -1;
     }
 
 
