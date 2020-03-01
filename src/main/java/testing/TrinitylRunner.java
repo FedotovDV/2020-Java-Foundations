@@ -1,8 +1,7 @@
 package testing;
 
 
-import testforwork.lngjava.entity.Entity;
-import testforwork.lngjava.entity.MultiEntity;
+
 
 import java.io.*;
 import java.util.*;
@@ -59,7 +58,7 @@ public class TrinitylRunner {
     private static void filterData(String[] arrayString) {
         if (arrayString.length == 3) {
             Trinity trinity = new Trinity(arrayString);
-//            allString.add(trinity);
+            allString.add(trinity);
             ArrayList<Trinity> trinityArrayList = new ArrayList<>();
             trinityArrayList.add(trinity);
             groupString.put(trinity, trinityArrayList);
