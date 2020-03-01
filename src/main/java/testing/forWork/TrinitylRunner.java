@@ -120,8 +120,7 @@ public class TrinitylRunner {
     }
 
     private static void saveInFile() {
-        try {
-            BufferedWriter out = new BufferedWriter(new FileWriter(FILEWRITEPATH));
+        try (BufferedWriter out = new BufferedWriter(new FileWriter(FILEWRITEPATH))) {
             out.write("Кол-во групп " + countGroup + "\n");
             int count = 1;
             for (Map.Entry<Integer, ArrayList<Group>> entry : orderedGroup.entrySet()) {
@@ -131,7 +130,6 @@ public class TrinitylRunner {
                     count++;
                 }
             }
-            out.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
