@@ -119,7 +119,7 @@ public class TrinitylRunner {
         }
     }
 
-    public static void saveInFile() {
+    private static void saveInFile() {
         try {
             BufferedWriter out = new BufferedWriter(new FileWriter(FILEWRITEPATH));
             out.write("Кол-во групп " + countGroup + "\n");
