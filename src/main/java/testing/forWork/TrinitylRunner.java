@@ -40,7 +40,7 @@ public class TrinitylRunner {
 
         clearGroupWithoutPair();
         finalGrouping();
-        print();
+        saveInFile();
         long endTime = System.nanoTime();
         System.out.println("Total Time in Second: " + (endTime - startTime) / 1000000000f);
     }
@@ -119,7 +119,7 @@ public class TrinitylRunner {
         }
     }
 
-    public static void print() {
+    public static void saveInFile() {
         try {
             BufferedWriter out = new BufferedWriter(new FileWriter(FILEWRITEPATH));
             out.write("Кол-во групп " + countGroup + "\n");
