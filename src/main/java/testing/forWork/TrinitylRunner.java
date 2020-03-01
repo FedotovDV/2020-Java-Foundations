@@ -1,7 +1,6 @@
 package testing.forWork;
 
 
-
 import testing.forWork.group.Entity;
 import testing.forWork.group.Group;
 import testing.forWork.group.Trinity;
@@ -17,19 +16,20 @@ public class TrinitylRunner {
     private static Set<Trinity> allString = new HashSet<>();
     private static Map<Entity, ArrayList<Trinity>> groupString = new HashMap<>();
     private static Map<Integer, ArrayList<Group>> orderedGroup = new TreeMap<>(Collections.reverseOrder());
-    private static Set<ArrayList<Trinity>> sortGroup = new TreeSet<>(new sizeComporator());
 
 
     private static int countGroup = 0;
 
     private final static String SEP = File.separator;
-    private final static String FILEPATH = System.getProperty("user.dir") + SEP + "src"
+    private final static String FILEREADPATH = System.getProperty("user.dir") + SEP + "src"
             + SEP + "main" + SEP + "resources" + SEP + "lng.csv";
+    private final static String FILEWRITEPATH = System.getProperty("user.dir") + SEP + "src"
+            + SEP + "main" + SEP + "resources" + SEP + "test.txt";
 
 
     public static void main(String[] args) {
         long startTime = System.nanoTime();
-        try (BufferedReader reader = new BufferedReader(new FileReader(FILEPATH))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(FILEREADPATH))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 filterData(line.replace("\"", "").split(";", -1));
@@ -120,28 +120,21 @@ public class TrinitylRunner {
     }
 
     public static void print() {
-        System.out.println("Кол-во групп " + countGroup);
-        int count = 1;
-        for (Map.Entry<Integer, ArrayList<Group>> entry : orderedGroup.entrySet()) {
-            for (Group group : entry.getValue()) {
-                System.out.println("Группа " + count + "\n");
-                System.out.println(group);
-                count++;
+        try {
+            BufferedWriter out = new BufferedWriter(new FileWriter(FILEWRITEPATH));
+            out.write("Кол-во групп " + countGroup + "\n");
+            int count = 1;
+            for (Map.Entry<Integer, ArrayList<Group>> entry : orderedGroup.entrySet()) {
+                for (Group group : entry.getValue()) {
+                    out.write("Группа " + count + "\n");
+                    out.write(String.valueOf(group));
+                    count++;
+                }
             }
+            out.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
-
-
-    private static class sizeComporator implements Comparator<ArrayList<Trinity>> {
-
-        @Override
-        public int compare(ArrayList<Trinity> t1, ArrayList<Trinity> t2) {
-            if (t1.size() < t2.size()) {
-                return 1;
-            } else {
-                return -1;
-            }
-        }
-    }
 }
