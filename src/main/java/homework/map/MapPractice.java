@@ -1,6 +1,6 @@
 package homework.map;
 
-import javax.net.ssl.SNIHostName;
+
 import java.util.*;
 
 public class MapPractice {
@@ -25,18 +25,18 @@ public class MapPractice {
         System.out.println("\nУдалим фрукт apple1.");
         basketFruit.remove("apple1");
 
-        System.out.println("\nПроверка на нал ичие ключ и значение");
+        System.out.println("\nПроверка на наличие ключ и значение");
         System.out.println("shopFruit.containsKey(\"apple1\") = " + shopFruit.containsKey("apple1"));
 
-        System.out.println("\nВывести все ключи ");
+        System.out.println("\nВывести все ключи из basketFruit");
         for (String key : basketFruit.keySet()) {
             System.out.println(key);
         }
-        System.out.println("\nВывести все значения ");
+        System.out.println("\nВывести все значения из basketFruit");
         for (Fruit fruit : basketFruit.values()) {
             System.out.println(fruit);
         }
-        System.out.println("\nВывести все ключи и значения с помощью entrySet");
+        System.out.println("\nВывести все ключи и значения с помощью entrySet из shopFruit");
         for (Map.Entry<String, Fruit> fruitEntry : shopFruit.entrySet()) {
             System.out.println(fruitEntry.getKey());
             System.out.println(fruitEntry.getValue());
