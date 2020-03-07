@@ -9,7 +9,7 @@ public class Palindromes {
     }
 
     public boolean isPalindrome() {
-        String stringTemp = stringOrigin.replaceAll("\\W", "");
+        String stringTemp = stringOrigin.replaceAll("[\\s\\p{Punct}]", "");
         StringBuilder stringBuilderOrigin = new StringBuilder(stringTemp);
         return stringTemp.equalsIgnoreCase(new String(stringBuilderOrigin.reverse()));
     }
