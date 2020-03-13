@@ -14,7 +14,9 @@ public class Main {
 
     private static void eatRandomBean(BeanFactory beanFactory) {
         Bean bean = getRandomBean(beanFactory);
-        System.out.println("What a surprise! ");
+        System.out.println("\"Bertie Bott's Every Flavour Beans\n" + " — A Risk With Every Mouthful!\"");
+        System.out.println("Harry Potter and the Philosopher's Stone\n" + "Chapter 6");
+        System.out.println("\nWhat a surprise! ");
         bean.taste();
     }
 
