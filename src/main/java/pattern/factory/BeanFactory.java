@@ -4,42 +4,49 @@ import pattern.factory.myEnum.BeanType;
 import pattern.factory.myclasses.*;
 import pattern.factory.myinterface.Bean;
 
+import java.util.*;
+
 public class BeanFactory {
 
+    static Map<BeanType, Bean> beanTypeMap = new HashMap<>();
+    static {
+        beanTypeMap.put(BeanType.APPLE, new AppleFlavourBean());
+        beanTypeMap.put(BeanType.CHOCOLATE, new ChocolateFlavourBean());
+        beanTypeMap.put(BeanType.GRASS, new GrassFlavourBean());
+        beanTypeMap.put(BeanType.LIVER, new LiverFlavourBean());
+        beanTypeMap.put(BeanType.SOAP, new SoapFlavourBean());
+        beanTypeMap.put(BeanType.SOCK, new SockFlavourBean());
+        beanTypeMap.put(BeanType.SPINACH, new SpinachFlavourBean());
+        beanTypeMap.put(BeanType.SPROUTS, new SproutsFlavourBean());
+        beanTypeMap.put(BeanType.STRAWBERRY, new StrawberryFlavourBean());
+
+    }
+
     public Bean getBean(BeanType beanType) {
-        Bean youBean = null;
+
         switch (beanType) {
             case APPLE:
-                youBean = new AppleFlavourBean();
-                break;
+                return new AppleFlavourBean();
             case CHOCOLATE:
-                youBean = new ChocolateFlavourBean();
-                break;
+                return new ChocolateFlavourBean();
             case GRASS:
-                youBean = new GrassFlavourBean();
-                break;
+                return new GrassFlavourBean();
             case LIVER:
-                youBean = new LiverFlavourBean();
-                break;
+                return new LiverFlavourBean();
             case SOAP:
-                youBean = new SoapFlavourBean();
-                break;
+                return new SoapFlavourBean();
             case SOCK:
-                youBean = new SockFlavourBean();
-                break;
+                return new SockFlavourBean();
             case SPINACH:
-                youBean = new SpinachFlavourBean();
-                break;
+                return new SpinachFlavourBean();
             case SPROUTS:
-                youBean = new SproutsFlavourBean();
-                break;
+                return new SproutsFlavourBean();
             case STRAWBERRY:
-                youBean = new StrawberryFlavourBean();
-                break;
-//            default:
-//                new IllegalArgumentException();
+                return new StrawberryFlavourBean();
+            default:
+                new IllegalArgumentException();
         }
-        return youBean;
+        return null;
 
     }
 }
