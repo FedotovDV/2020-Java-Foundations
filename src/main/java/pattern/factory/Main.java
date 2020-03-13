@@ -10,6 +10,7 @@ public class Main {
     public static void main(String[] args) {
         BeanFactory beanFactory = new BeanFactory();
         eatRandomBean(beanFactory);
+
     }
 
     private static void eatRandomBean(BeanFactory beanFactory) {
