@@ -1,5 +1,7 @@
 package homework.thread;
 
+import java.util.concurrent.TimeUnit;
+
 public class MyThreads extends Thread{
 
     private String outputMessage;
@@ -11,7 +13,7 @@ public class MyThreads extends Thread{
     }
 
     public MyThreads(String outputMessage) {
-        this(outputMessage, 5000);
+        this(outputMessage, 2000);
     }
 
     public String getOutputMessage() {
@@ -27,6 +29,7 @@ public class MyThreads extends Thread{
     public void run() {
         for (int i = 0; i < 10; i++) {
             try {
+//                TimeUnit.SECONDS.sleep(2);
                 Thread.sleep(millis);
             } catch (InterruptedException e) {
                 e.printStackTrace();

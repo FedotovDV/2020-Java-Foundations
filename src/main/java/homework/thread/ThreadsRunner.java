@@ -12,6 +12,31 @@ public class ThreadsRunner {
         Thread thread2 = new Thread(new MyRunnable("Hello, Java!"));
         thread1.start();
         thread2.start();
+/*
 
+if use   TimeUnit.SECONDS.sleep(2); and (5)
+or Thread.sleep(millis); 2000 and 5000
+Hello, World!
+Hello, World!
+Hello, Java!
+Hello, World!
+Hello, World!
+Hello, Java!
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, Java!
+Hello, World!
+Hello, World!
+Hello, Java!
+Hello, World!
+Hello, Java!
+Hello, Java!
+Hello, Java!
+Hello, Java!
+Hello, Java!
+Hello, Java!
+
+ */
     }
 }

@@ -1,5 +1,7 @@
 package homework.thread;
 
+import java.util.concurrent.TimeUnit;
+
 public class MyRunnable implements Runnable {
     private String outputMessage;
     private long millis;
@@ -26,6 +28,7 @@ public class MyRunnable implements Runnable {
     public void run() {
         for (int i = 0; i < 10; i++) {
             try {
+//                TimeUnit.SECONDS.sleep(5);
                 Thread.sleep(millis);
             } catch (InterruptedException e) {
                 e.printStackTrace();
