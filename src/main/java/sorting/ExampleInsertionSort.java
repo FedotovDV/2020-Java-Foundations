@@ -11,14 +11,14 @@ public class ExampleInsertionSort {
         printSortArray(myArray);
     }
     private static void insertionSort(int[] arrayOfNumbers) {
-        for (int i = 1; i < arrayOfNumbers.length; i++) {
-            int key = arrayOfNumbers[i];
-            int j = i - 1;
-            while (j >= 0 && key < arrayOfNumbers[j]) {
-                arrayOfNumbers[j + 1] = arrayOfNumbers[j];
-                j--;
+        for (int i = 1; i < arrayOfNumbers.length; i++) { //i - это разделительный маркер
+            int key = arrayOfNumbers[i];                  // скопировать помеченный элемент
+            int j = i - 1;                                // начать перемещение с i
+            while (j >= 0 && key < arrayOfNumbers[j]) {   // пока не найден меньший элемент
+                arrayOfNumbers[j + 1] = arrayOfNumbers[j]; // сдвинуть элемент вправо
+                j--;                                       // перейти на одну позицию влево
             }
-            arrayOfNumbers[j + 1] = key;
+            arrayOfNumbers[j + 1] = key;                   // вставить помеченый элемент
         }
     }
 
