@@ -12,7 +12,7 @@ public class TriangleAppTest {
     public void testTriangle() {
         int theNumber1 = 1;
         int theNumber2 = 5;
-        assertThat(triangle(theNumber1)).isEqualTo(1);
-        assertThat(triangle(theNumber2)).isEqualTo(((theNumber2 + 1) / 2) * theNumber2);
+        assertEquals(triangle(theNumber1), 1);
+        assertEquals(triangle(theNumber2), ((theNumber2 + 1) / 2) * theNumber2);
     }
 }
