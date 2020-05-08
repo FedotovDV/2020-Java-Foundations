@@ -1,8 +1,7 @@
 package recursion;
-import lombok.extern.log4j.Log4j;
+import lombok.extern.log4j.Log4j2;
 
-
-@Log4j
+@Log4j2
 public class TriangleApp {
 
     public static int triangle(int n) {

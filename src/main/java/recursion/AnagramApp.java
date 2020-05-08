@@ -1,8 +1,8 @@
 package recursion;
 
-import lombok.extern.log4j.Log4j;
+import lombok.extern.log4j.Log4j2;
 
-@Log4j
+@Log4j2
 public class AnagramApp {
 
     static int size;
@@ -65,7 +65,7 @@ public class AnagramApp {
         System.out.print("   ");
         System.out.flush();
         if(count%6 == 0){
-            System.out.println("");
+            System.out.println();
         }
     }
 }
