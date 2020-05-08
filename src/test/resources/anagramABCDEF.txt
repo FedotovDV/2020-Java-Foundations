@@ -1,0 +1,120 @@
+  1 abcdef     2 abcdfe     3 abcefd     4 abcedf     5 abcfde     6 abcfed   
+  7 abdefc     8 abdecf     9 abdfce    10 abdfec    11 abdcef    12 abdcfe   
+ 13 abefcd    14 abefdc    15 abecdf    16 abecfd    17 abedfc    18 abedcf   
+ 19 abfcde    20 abfced    21 abfdec    22 abfdce    23 abfecd    24 abfedc   
+ 25 acdefb    26 acdebf    27 acdfbe    28 acdfeb    29 acdbef    30 acdbfe   
+ 31 acefbd    32 acefdb    33 acebdf    34 acebfd    35 acedfb    36 acedbf   
+ 37 acfbde    38 acfbed    39 acfdeb    40 acfdbe    41 acfebd    42 acfedb   
+ 43 acbdef    44 acbdfe    45 acbefd    46 acbedf    47 acbfde    48 acbfed   
+ 49 adefbc    50 adefcb    51 adebcf    52 adebfc    53 adecfb    54 adecbf   
+ 55 adfbce    56 adfbec    57 adfceb    58 adfcbe    59 adfebc    60 adfecb   
+ 61 adbcef    62 adbcfe    63 adbefc    64 adbecf    65 adbfce    66 adbfec   
+ 67 adcefb    68 adcebf    69 adcfbe    70 adcfeb    71 adcbef    72 adcbfe   
+ 73 aefbcd    74 aefbdc    75 aefcdb    76 aefcbd    77 aefdbc    78 aefdcb   
+ 79 aebcdf    80 aebcfd    81 aebdfc    82 aebdcf    83 aebfcd    84 aebfdc   
+ 85 aecdfb    86 aecdbf    87 aecfbd    88 aecfdb    89 aecbdf    90 aecbfd   
+ 91 aedfbc    92 aedfcb    93 aedbcf    94 aedbfc    95 aedcfb    96 aedcbf   
+ 97 afbcde    98 afbced    99 afbdec   100 afbdce   101 afbecd   102 afbedc   
+103 afcdeb   104 afcdbe   105 afcebd   106 afcedb   107 afcbde   108 afcbed   
+109 afdebc   110 afdecb   111 afdbce   112 afdbec   113 afdceb   114 afdcbe   
+115 afebcd   116 afebdc   117 afecdb   118 afecbd   119 afedbc   120 afedcb   
+121 bcdefa   122 bcdeaf   123 bcdfae   124 bcdfea   125 bcdaef   126 bcdafe   
+127 bcefad   128 bcefda   129 bceadf   130 bceafd   131 bcedfa   132 bcedaf   
+133 bcfade   134 bcfaed   135 bcfdea   136 bcfdae   137 bcfead   138 bcfeda   
+139 bcadef   140 bcadfe   141 bcaefd   142 bcaedf   143 bcafde   144 bcafed   
+145 bdefac   146 bdefca   147 bdeacf   148 bdeafc   149 bdecfa   150 bdecaf   
+151 bdface   152 bdfaec   153 bdfcea   154 bdfcae   155 bdfeac   156 bdfeca   
+157 bdacef   158 bdacfe   159 bdaefc   160 bdaecf   161 bdafce   162 bdafec   
+163 bdcefa   164 bdceaf   165 bdcfae   166 bdcfea   167 bdcaef   168 bdcafe   
+169 befacd   170 befadc   171 befcda   172 befcad   173 befdac   174 befdca   
+175 beacdf   176 beacfd   177 beadfc   178 beadcf   179 beafcd   180 beafdc   
+181 becdfa   182 becdaf   183 becfad   184 becfda   185 becadf   186 becafd   
+187 bedfac   188 bedfca   189 bedacf   190 bedafc   191 bedcfa   192 bedcaf   
+193 bfacde   194 bfaced   195 bfadec   196 bfadce   197 bfaecd   198 bfaedc   
+199 bfcdea   200 bfcdae   201 bfcead   202 bfceda   203 bfcade   204 bfcaed   
+205 bfdeac   206 bfdeca   207 bfdace   208 bfdaec   209 bfdcea   210 bfdcae   
+211 bfeacd   212 bfeadc   213 bfecda   214 bfecad   215 bfedac   216 bfedca   
+217 bacdef   218 bacdfe   219 bacefd   220 bacedf   221 bacfde   222 bacfed   
+223 badefc   224 badecf   225 badfce   226 badfec   227 badcef   228 badcfe   
+229 baefcd   230 baefdc   231 baecdf   232 baecfd   233 baedfc   234 baedcf   
+235 bafcde   236 bafced   237 bafdec   238 bafdce   239 bafecd   240 bafedc   
+241 cdefab   242 cdefba   243 cdeabf   244 cdeafb   245 cdebfa   246 cdebaf   
+247 cdfabe   248 cdfaeb   249 cdfbea   250 cdfbae   251 cdfeab   252 cdfeba   
+253 cdabef   254 cdabfe   255 cdaefb   256 cdaebf   257 cdafbe   258 cdafeb   
+259 cdbefa   260 cdbeaf   261 cdbfae   262 cdbfea   263 cdbaef   264 cdbafe   
+265 cefabd   266 cefadb   267 cefbda   268 cefbad   269 cefdab   270 cefdba   
+271 ceabdf   272 ceabfd   273 ceadfb   274 ceadbf   275 ceafbd   276 ceafdb   
+277 cebdfa   278 cebdaf   279 cebfad   280 cebfda   281 cebadf   282 cebafd   
+283 cedfab   284 cedfba   285 cedabf   286 cedafb   287 cedbfa   288 cedbaf   
+289 cfabde   290 cfabed   291 cfadeb   292 cfadbe   293 cfaebd   294 cfaedb   
+295 cfbdea   296 cfbdae   297 cfbead   298 cfbeda   299 cfbade   300 cfbaed   
+301 cfdeab   302 cfdeba   303 cfdabe   304 cfdaeb   305 cfdbea   306 cfdbae   
+307 cfeabd   308 cfeadb   309 cfebda   310 cfebad   311 cfedab   312 cfedba   
+313 cabdef   314 cabdfe   315 cabefd   316 cabedf   317 cabfde   318 cabfed   
+319 cadefb   320 cadebf   321 cadfbe   322 cadfeb   323 cadbef   324 cadbfe   
+325 caefbd   326 caefdb   327 caebdf   328 caebfd   329 caedfb   330 caedbf   
+331 cafbde   332 cafbed   333 cafdeb   334 cafdbe   335 cafebd   336 cafedb   
+337 cbdefa   338 cbdeaf   339 cbdfae   340 cbdfea   341 cbdaef   342 cbdafe   
+343 cbefad   344 cbefda   345 cbeadf   346 cbeafd   347 cbedfa   348 cbedaf   
+349 cbfade   350 cbfaed   351 cbfdea   352 cbfdae   353 cbfead   354 cbfeda   
+355 cbadef   356 cbadfe   357 cbaefd   358 cbaedf   359 cbafde   360 cbafed   
+361 defabc   362 defacb   363 defbca   364 defbac   365 defcab   366 defcba   
+367 deabcf   368 deabfc   369 deacfb   370 deacbf   371 deafbc   372 deafcb   
+373 debcfa   374 debcaf   375 debfac   376 debfca   377 debacf   378 debafc   
+379 decfab   380 decfba   381 decabf   382 decafb   383 decbfa   384 decbaf   
+385 dfabce   386 dfabec   387 dfaceb   388 dfacbe   389 dfaebc   390 dfaecb   
+391 dfbcea   392 dfbcae   393 dfbeac   394 dfbeca   395 dfbace   396 dfbaec   
+397 dfceab   398 dfceba   399 dfcabe   400 dfcaeb   401 dfcbea   402 dfcbae   
+403 dfeabc   404 dfeacb   405 dfebca   406 dfebac   407 dfecab   408 dfecba   
+409 dabcef   410 dabcfe   411 dabefc   412 dabecf   413 dabfce   414 dabfec   
+415 dacefb   416 dacebf   417 dacfbe   418 dacfeb   419 dacbef   420 dacbfe   
+421 daefbc   422 daefcb   423 daebcf   424 daebfc   425 daecfb   426 daecbf   
+427 dafbce   428 dafbec   429 dafceb   430 dafcbe   431 dafebc   432 dafecb   
+433 dbcefa   434 dbceaf   435 dbcfae   436 dbcfea   437 dbcaef   438 dbcafe   
+439 dbefac   440 dbefca   441 dbeacf   442 dbeafc   443 dbecfa   444 dbecaf   
+445 dbface   446 dbfaec   447 dbfcea   448 dbfcae   449 dbfeac   450 dbfeca   
+451 dbacef   452 dbacfe   453 dbaefc   454 dbaecf   455 dbafce   456 dbafec   
+457 dcefab   458 dcefba   459 dceabf   460 dceafb   461 dcebfa   462 dcebaf   
+463 dcfabe   464 dcfaeb   465 dcfbea   466 dcfbae   467 dcfeab   468 dcfeba   
+469 dcabef   470 dcabfe   471 dcaefb   472 dcaebf   473 dcafbe   474 dcafeb   
+475 dcbefa   476 dcbeaf   477 dcbfae   478 dcbfea   479 dcbaef   480 dcbafe   
+481 efabcd   482 efabdc   483 efacdb   484 efacbd   485 efadbc   486 efadcb   
+487 efbcda   488 efbcad   489 efbdac   490 efbdca   491 efbacd   492 efbadc   
+493 efcdab   494 efcdba   495 efcabd   496 efcadb   497 efcbda   498 efcbad   
+499 efdabc   500 efdacb   501 efdbca   502 efdbac   503 efdcab   504 efdcba   
+505 eabcdf   506 eabcfd   507 eabdfc   508 eabdcf   509 eabfcd   510 eabfdc   
+511 eacdfb   512 eacdbf   513 eacfbd   514 eacfdb   515 eacbdf   516 eacbfd   
+517 eadfbc   518 eadfcb   519 eadbcf   520 eadbfc   521 eadcfb   522 eadcbf   
+523 eafbcd   524 eafbdc   525 eafcdb   526 eafcbd   527 eafdbc   528 eafdcb   
+529 ebcdfa   530 ebcdaf   531 ebcfad   532 ebcfda   533 ebcadf   534 ebcafd   
+535 ebdfac   536 ebdfca   537 ebdacf   538 ebdafc   539 ebdcfa   540 ebdcaf   
+541 ebfacd   542 ebfadc   543 ebfcda   544 ebfcad   545 ebfdac   546 ebfdca   
+547 ebacdf   548 ebacfd   549 ebadfc   550 ebadcf   551 ebafcd   552 ebafdc   
+553 ecdfab   554 ecdfba   555 ecdabf   556 ecdafb   557 ecdbfa   558 ecdbaf   
+559 ecfabd   560 ecfadb   561 ecfbda   562 ecfbad   563 ecfdab   564 ecfdba   
+565 ecabdf   566 ecabfd   567 ecadfb   568 ecadbf   569 ecafbd   570 ecafdb   
+571 ecbdfa   572 ecbdaf   573 ecbfad   574 ecbfda   575 ecbadf   576 ecbafd   
+577 edfabc   578 edfacb   579 edfbca   580 edfbac   581 edfcab   582 edfcba   
+583 edabcf   584 edabfc   585 edacfb   586 edacbf   587 edafbc   588 edafcb   
+589 edbcfa   590 edbcaf   591 edbfac   592 edbfca   593 edbacf   594 edbafc   
+595 edcfab   596 edcfba   597 edcabf   598 edcafb   599 edcbfa   600 edcbaf   
+601 fabcde   602 fabced   603 fabdec   604 fabdce   605 fabecd   606 fabedc   
+607 facdeb   608 facdbe   609 facebd   610 facedb   611 facbde   612 facbed   
+613 fadebc   614 fadecb   615 fadbce   616 fadbec   617 fadceb   618 fadcbe   
+619 faebcd   620 faebdc   621 faecdb   622 faecbd   623 faedbc   624 faedcb   
+625 fbcdea   626 fbcdae   627 fbcead   628 fbceda   629 fbcade   630 fbcaed   
+631 fbdeac   632 fbdeca   633 fbdace   634 fbdaec   635 fbdcea   636 fbdcae   
+637 fbeacd   638 fbeadc   639 fbecda   640 fbecad   641 fbedac   642 fbedca   
+643 fbacde   644 fbaced   645 fbadec   646 fbadce   647 fbaecd   648 fbaedc   
+649 fcdeab   650 fcdeba   651 fcdabe   652 fcdaeb   653 fcdbea   654 fcdbae   
+655 fceabd   656 fceadb   657 fcebda   658 fcebad   659 fcedab   660 fcedba   
+661 fcabde   662 fcabed   663 fcadeb   664 fcadbe   665 fcaebd   666 fcaedb   
+667 fcbdea   668 fcbdae   669 fcbead   670 fcbeda   671 fcbade   672 fcbaed   
+673 fdeabc   674 fdeacb   675 fdebca   676 fdebac   677 fdecab   678 fdecba   
+679 fdabce   680 fdabec   681 fdaceb   682 fdacbe   683 fdaebc   684 fdaecb   
+685 fdbcea   686 fdbcae   687 fdbeac   688 fdbeca   689 fdbace   690 fdbaec   
+691 fdceab   692 fdceba   693 fdcabe   694 fdcaeb   695 fdcbea   696 fdcbae   
+697 feabcd   698 feabdc   699 feacdb   700 feacbd   701 feadbc   702 feadcb   
+703 febcda   704 febcad   705 febdac   706 febdca   707 febacd   708 febadc   
+709 fecdab   710 fecdba   711 fecabd   712 fecadb   713 fecbda   714 fecbad   
+715 fedabc   716 fedacb   717 fedbca   718 fedbac   719 fedcab   720 fedcba   
