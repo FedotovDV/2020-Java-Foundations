@@ -28,25 +28,27 @@ public class CalculatorRun {
 
             System.out.println("Input: ");
             inputString = bufferedReader.readLine();
-            System.out.println(Pattern.matches("[A-Z_0-9].*.[A-Z_0-9]",inputString));
+            System.out.println(Pattern.matches("[IVX].*.[-+*/].*.[IVX]", inputString));
+            System.out.println(Pattern.matches("[0-9].*.[-+*/].*.[0-9]", inputString));
             expression = inputString.split(" ");
 
 
             try {
                 RomanNumeric romanNumeric;
 
-                if(Pattern.matches("[0-9]",expression[0]) ||Pattern.matches("[0-9][0-9]",expression[0] )){
+                if (Pattern.matches("[0-9]", expression[0]) || Pattern.matches("10", expression[0])) {
                     System.out.println(expression[0]);
-                } else {
+                } else if (Pattern.matches("[IVX]", expression[0]) || Pattern.matches("[IVX][IVX]", expression[0]) || Pattern.matches("[IVX][IVX][IVX]", expression[0])) {
+
                     romanNumeric = RomanNumeric.valueOf(expression[0]);
                     System.out.println(romanNumeric.name());
                     System.out.println(romanNumeric.getArabicNumerals());
+                } else {
+                    throw new IllegalArgumentException();
                 }
             } catch (IllegalArgumentException e) {
                 System.out.println("Некорректный ввод!");
             }
-
-
 
 
         } catch (IOException e) {
