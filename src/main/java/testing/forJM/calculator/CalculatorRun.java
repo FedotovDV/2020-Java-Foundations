@@ -66,16 +66,10 @@ public class CalculatorRun {
                         if (Pattern.matches("[IVX]+", expression[0])) {
                             romanNumeric = RomanNumeric.valueOf(expression[0]);
                             x = romanNumeric.getArabicNumerals();
-                            if(x > 10){
-                                throw new IllegalArgumentException();
-                            }
                         }
                         if (Pattern.matches("[IVX]+", expression[2])) {
                             romanNumeric = RomanNumeric.valueOf(expression[2]);
                             y = romanNumeric.getArabicNumerals();
-                            if(y > 10){
-                                throw new IllegalArgumentException();
-                            }
                         }
                         if (Pattern.matches("[-+*/]", expression[1])) {
                             System.out.println("Output: ");
