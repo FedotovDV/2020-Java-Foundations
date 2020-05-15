@@ -6,7 +6,7 @@ import java.util.*;
 
 public class OperationFactory {
 
-    private static final   Map<String, Operation> operationMap = new HashMap<>();
+    private static final Map<String, Operation> operationMap = new HashMap<>();
 
     static {
         operationMap.put("+", new AddOperation());

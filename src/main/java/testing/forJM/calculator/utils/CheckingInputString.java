@@ -6,7 +6,6 @@ import java.util.regex.Pattern;
 
 public class CheckingInputString implements CheckingExpression {
 
-
     private String inputString;
     private boolean romanNumeric;
     private boolean validExpression;
@@ -26,18 +25,18 @@ public class CheckingInputString implements CheckingExpression {
                 if (Pattern.matches("[-+*/]", expression[1])) {
                     if (Pattern.matches("[1-9]", expression[2]) || Pattern.matches("10", expression[2])) {
                         return true;
-            }
-            }
-            }
-            } else if(Pattern.matches("[IVX]+.[-+*/].[IVX]+",inputString)) {
-        expression = inputString.split(" ");
-        if (Pattern.matches("[IVX]+", expression[0])) {
-            if (Pattern.matches("[-+*/]", expression[1])) {
-                if (Pattern.matches("[IVX]+", expression[2])) {
-                    romanNumeric = true;
-                    return true;
+                    }
                 }
             }
+        } else if (Pattern.matches("[IVX]+.[-+*/].[IVX]+", inputString)) {
+            expression = inputString.split(" ");
+            if (Pattern.matches("[IVX]+", expression[0])) {
+                if (Pattern.matches("[-+*/]", expression[1])) {
+                    if (Pattern.matches("[IVX]+", expression[2])) {
+                        romanNumeric = true;
+                        return true;
+                    }
+                }
             }
         }
 

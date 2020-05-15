@@ -26,10 +26,6 @@ public class CalculatorRun {
         try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in))) {
             String[] expression;
             String inputString;
-            int x = 0;
-            int y = 0;
-
-
             while (true) {
                 System.out.println("\nInput: \n");
                 inputString = bufferedReader.readLine();
@@ -45,14 +41,13 @@ public class CalculatorRun {
                         calculateArabicNumbers(expression);
                     }
                 } else {
-                    throw new IncorrectDataEntryException("Invalid input: " + inputString + " !");
+                    throw new IncorrectDataEntryException("Invalid input:\u001B[1m\"" + inputString + "\"\u001B[0m!");
                 }
             }
         } catch (
                 IOException e) {
             e.printStackTrace();
         }
-
     }
 
     private static void calculateArabicNumbers(String[] expression) {
