@@ -3,7 +3,9 @@ package testing.forJM.calculator;
 import testing.forJM.calculator.exception.IncorrectDataEntryException;
 import testing.forJM.calculator.interfaces.CheckingExpression;
 import testing.forJM.calculator.utils.*;
+
 import java.io.*;
+
 import static testing.forJM.calculator.impl.OperationFactory.getOperation;
 import static testing.forJM.calculator.utils.ConverterArabicToRoman.convertArabicToRoman;
 
@@ -13,7 +15,7 @@ public class CalculatorRun {
     public static void main(String[] args) {
 
         try {
-         calculate();
+            calculate();
         } catch (IncorrectDataEntryException e) {
             e.printStackTrace();
         }
@@ -27,21 +29,25 @@ public class CalculatorRun {
             int x = 0;
             int y = 0;
 
-            System.out.println("Input: \n");
-            inputString = bufferedReader.readLine();
 
-            CheckingExpression checkExpression = new CheckingInputString(inputString);
-            if (checkExpression.isValidExpression()) {
-                expression = inputString.split(" ");
-                if (checkExpression.isRomanNumeric()) {
-                    calculateRomanNumbers(expression);
-                } else {
-                    calculateArabicNumbers(expression);
+            while (true) {
+                System.out.println("\nInput: \n");
+                inputString = bufferedReader.readLine();
+                if (inputString.equalsIgnoreCase("exit")) {
+                    break;
                 }
-            } else {
-                throw new IncorrectDataEntryException("Invalid input: " + inputString + " !");
+                CheckingExpression checkExpression = new CheckingInputString(inputString);
+                if (checkExpression.isValidExpression()) {
+                    expression = inputString.split(" ");
+                    if (checkExpression.isRomanNumeric()) {
+                        calculateRomanNumbers(expression);
+                    } else {
+                        calculateArabicNumbers(expression);
+                    }
+                } else {
+                    throw new IncorrectDataEntryException("Invalid input: " + inputString + " !");
+                }
             }
-
         } catch (
                 IOException e) {
             e.printStackTrace();
