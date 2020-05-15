@@ -1,11 +1,9 @@
 package testing.forJM.calculator;
 
 import testing.forJM.calculator.exception.IncorrectDataEntryException;
-import testing.forJM.calculator.utils.RomanNumeric;
-import testing.forJM.calculator.utils.CheckingExpansion;
-
+import testing.forJM.calculator.interfaces.CheckingExpression;
+import testing.forJM.calculator.utils.*;
 import java.io.*;
-
 import static testing.forJM.calculator.impl.OperationFactory.getOperation;
 import static testing.forJM.calculator.utils.ConverterArabicToRoman.convertArabicToRoman;
 
@@ -32,7 +30,7 @@ public class CalculatorRun {
             System.out.println("Input: \n");
             inputString = bufferedReader.readLine();
 
-            CheckingExpansion checkExpression = new CheckingExpansion(inputString);
+            CheckingExpression checkExpression = new CheckingInputString(inputString);
             if (checkExpression.isValidExpression()) {
                 expression = inputString.split(" ");
                 if (checkExpression.isRomanNumeric()) {

@@ -1,15 +1,17 @@
 package testing.forJM.calculator.utils;
 
+import testing.forJM.calculator.interfaces.CheckingExpression;
+
 import java.util.regex.Pattern;
 
-public class CheckingExpansion {
+public class CheckingInputString implements CheckingExpression {
 
 
     private String inputString;
     private boolean romanNumeric;
     private boolean validExpression;
 
-    public CheckingExpansion(String inputString) {
+    public CheckingInputString(String inputString) {
         this.inputString = inputString;
         romanNumeric = false;
         validExpression = checkInputString();
@@ -42,10 +44,12 @@ public class CheckingExpansion {
         return false;
     }
 
+    @Override
     public boolean isRomanNumeric() {
         return romanNumeric;
     }
 
+    @Override
     public boolean isValidExpression() {
         return validExpression;
     }
