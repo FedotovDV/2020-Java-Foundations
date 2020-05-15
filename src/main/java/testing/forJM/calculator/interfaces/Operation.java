@@ -1,4 +1,4 @@
-package testing.forJM.calculator;
+package testing.forJM.calculator.interfaces;
 
 public interface Operation {
 

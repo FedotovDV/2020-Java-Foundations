@@ -1,8 +1,7 @@
 package testing.forJM.calculator.impl;
 
-import collections.listPractice.myArrayList.MyArrayList;
-import testing.forJM.calculator.Operation;
-import testing.forJM.calculator.impl.*;
+import testing.forJM.calculator.interfaces.Operation;
+
 import java.util.*;
 
 public class OperationFactory {

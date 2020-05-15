@@ -1,6 +1,6 @@
 package testing.forJM.calculator.impl;
 
-import testing.forJM.calculator.Operation;
+import testing.forJM.calculator.interfaces.Operation;
 
 public class AddOperation implements Operation {
     @Override

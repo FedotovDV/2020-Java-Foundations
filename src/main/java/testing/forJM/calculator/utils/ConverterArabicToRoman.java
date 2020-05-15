@@ -1,4 +1,4 @@
-package testing.forJM.calculator.numeric;
+package testing.forJM.calculator.utils;
 
 
 import java.util.HashMap;

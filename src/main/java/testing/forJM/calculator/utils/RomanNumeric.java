@@ -1,4 +1,4 @@
-package testing.forJM.calculator.numeric;
+package testing.forJM.calculator.utils;
 
 public enum RomanNumeric {
 
@@ -13,8 +13,6 @@ public enum RomanNumeric {
     IX(9),
     X(10);
 
-
-
     private int arabicNumerals;
 
     RomanNumeric(int arabicNumerals) {
@@ -24,6 +22,5 @@ public enum RomanNumeric {
     public int getArabicNumerals() {
         return arabicNumerals;
     }
-
 
 }
