@@ -18,6 +18,14 @@ public class BinarySearchApp {
         size = 0;
     }
 
+    public BinarySearchApp(int max, int[] values){
+        ordArray = new int[max];
+        size = 0;
+        for(int value: values){
+            insert(value);
+        }
+    }
+
     public int[] getArray() {
         return Arrays.copyOf(ordArray, size);
     }
@@ -39,7 +47,7 @@ public class BinarySearchApp {
             return currentIndex;
         } else if (lowerBound > upperBound) {
             //элемент не найден
-            return size;
+            return -1;
         } else {
             if (ordArray[currentIndex] < searchKey) {
                 // в верхней половине
