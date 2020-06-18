@@ -1,4 +1,4 @@
-package core;
+package oop;
 
 public class Cat {
     public static boolean isLoveMilk = true;//константа на уровне класса, если происходит изменение.

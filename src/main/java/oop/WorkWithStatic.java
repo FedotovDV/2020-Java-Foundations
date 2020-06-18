@@ -1,4 +1,4 @@
-package core;
+package oop;
 
 public class WorkWithStatic {
     public static void main(String[] args) {

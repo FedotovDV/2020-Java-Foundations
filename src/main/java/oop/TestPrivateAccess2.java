@@ -1,6 +1,6 @@
-package core;
+package oop;
 
-import oop.SomeClass;
+
 
 import java.lang.reflect.Field;
 
@@ -25,10 +25,8 @@ public class TestPrivateAccess2 {
 
                 System.out.println(reflectField2);
                 System.out.println(fieldValue2);
-            } catch (IllegalAccessException ex) {
+            } catch (IllegalAccessException | NoSuchFieldException ex) {
                 ex.printStackTrace();
-            } catch (NoSuchFieldException e) {
-                e.printStackTrace();
             }
 
         }
