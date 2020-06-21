@@ -22,7 +22,6 @@ public class PowerOfTwo {
 //            3. Передаваемый параметр должен иметь тип int.
 
     public static void main(String[] args) {
-
         System.out.println(isPowerOfTwo(-2));
     }
 
