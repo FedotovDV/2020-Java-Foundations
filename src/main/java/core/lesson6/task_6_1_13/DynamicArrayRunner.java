@@ -24,12 +24,8 @@ public class DynamicArrayRunner {
         private int size;
 
         public DynamicArray() {
-            this(0);
-        }
-
-        public DynamicArray(int size) {
             array = (T[]) new Object[10];
-            this.size = size;
+            size = 0;
         }
 
         public void add(T el) {
@@ -41,12 +37,16 @@ public class DynamicArrayRunner {
 
         private void resizeArray() {
             T[] tempArray = (T[]) new Object[(3 * array.length / 2 + 1)];
-            array =  Arrays.copyOf(array,tempArray.length);
+            array = Arrays.copyOf(array, tempArray.length);
         }
 
         public void remove(int index) {
-            T oldValue = array[index];
-            if (size - index >= 0) System.arraycopy(array, index + 1, array, index, size - index);
+            if (index >= size) {
+                throw new IndexOutOfBoundsException("Wrong index: " + index);
+            }
+            if (size - index >= 0){
+                System.arraycopy(array, index + 1, array, index, size - index);
+            }
             array[--size] = null;
         }
 

@@ -24,12 +24,10 @@ public class SymmetricDifference {
     }
 
     public static <T> Set<T> symmetricDifference(Set<? extends T> set1, Set<? extends T> set2) {
-        HashSet<T> resultSet1 = new HashSet<>();
-        HashSet<T> resultSet2 = new HashSet<>();
-        resultSet1.addAll(set1);
+        HashSet<T> resultSet1 = new HashSet<>(set1);
         resultSet1.removeAll(set2);
 
-        resultSet2.addAll(set2);
+        HashSet<T> resultSet2 = new HashSet<>(set2);
         resultSet2.removeAll(set1);
 
         resultSet1.addAll(resultSet2);

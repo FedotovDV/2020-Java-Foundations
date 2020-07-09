@@ -23,24 +23,31 @@ public class ReversRunner {
 
     public static void main(String[] args) {
 //        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        int count = 0;
         Deque<Integer> integerQueue = new ArrayDeque<>();
         try (Scanner scanner = new Scanner(System.in)) {
-
             while (scanner.hasNext()) {
-                integerQueue.add(scanner.nextInt());
-                count++;
+                scanner.nextInt();
+                if (scanner.hasNext()) {
+                    integerQueue.add(scanner.nextInt());
+                }
             }
         }
-        Iterator reverse = integerQueue.descendingIterator();
-        while (reverse.hasNext()) {
-            Integer element = (Integer) reverse.next();
-            if ((count--) % 2 == 0)
-                System.out.print(element);
-            if (reverse.hasNext()) {
+        for (int i = integerQueue.size(); i > 0; i--) {
+            System.out.print(integerQueue.removeLast());
+            if (i > 1) {
                 System.out.print(" ");
             }
-            reverse.remove();
         }
+
+//        Iterator reverse = integerQueue.descendingIterator();
+//        while (reverse.hasNext()) {
+//            Integer element = (Integer) reverse.next();
+//            if ((count--) % 2 == 0)
+//                System.out.print(element);
+//            if (reverse.hasNext()) {
+//                System.out.print(" ");
+//            }
+//            reverse.remove();
+//        }
     }
 }
