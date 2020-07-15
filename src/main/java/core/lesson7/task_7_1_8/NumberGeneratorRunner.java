@@ -20,7 +20,6 @@ public class NumberGeneratorRunner {
     }
 
     public static NumberGenerator<? super Number> getGenerator() {
-        NumberGenerator isPositive = x -> x.intValue() > 0;
-        return isPositive;
+        return x -> x.intValue() > 0;
     }
 }

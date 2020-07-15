@@ -6,14 +6,17 @@ import java.util.function.UnaryOperator;
 public class UnaryOperatorRunner {
 
     public static void main(String[] args) {
-        System.out.println(sqrt());
+        System.out.println(sqrt().apply(5));
 
     }
-
 
     public static UnaryOperator<Integer> sqrt() {
-        UnaryOperator<Integer> square = x -> x * x;
-        square.apply(5); // 25
-        return square;
+        return (Integer x) -> x * x;
     }
+
+//    public static UnaryOperator<Integer> sqrt() {
+//        UnaryOperator<Integer> square = x -> x * x;
+//        square.apply(5); // 25
+//        return square;
+//    }
 }
