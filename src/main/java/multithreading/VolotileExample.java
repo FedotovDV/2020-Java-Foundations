@@ -2,7 +2,6 @@ package multithreading;
 
 public class VolotileExample extends Thread{
     volatile boolean b = true;
-
     public void run(){
         long counter = 0;
         while(b){

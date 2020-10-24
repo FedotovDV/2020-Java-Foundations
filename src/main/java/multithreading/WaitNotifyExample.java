@@ -9,14 +9,12 @@ public class WaitNotifyExample {
         Thread thread2 = new Thread(consumer);
         thread1.start();
         thread2.start();
-
     }
 }
 
 
 class Market {
     private int breadCount = 0;
-
     public synchronized void getBread() {
         while (breadCount < 1) {
             try {

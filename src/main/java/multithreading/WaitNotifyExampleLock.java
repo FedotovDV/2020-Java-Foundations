@@ -9,7 +9,6 @@ public class WaitNotifyExampleLock {
         Thread thread2 = new Thread(consumer);
         thread1.start();
         thread2.start();
-
     }
 }
 

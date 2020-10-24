@@ -22,7 +22,6 @@ public class SynchronizedBlock2 {
 }
 
 class R2 implements Runnable {
-
     @Override
     public void run() {
         for (int i = 0; i < 2000; i++) {

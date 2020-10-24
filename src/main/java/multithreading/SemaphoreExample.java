@@ -23,21 +23,19 @@ class Person extends Thread {
         this.callBox = callBox;
         this.start(); // при создании Person поток сразу запускается
     }
-
     @Override
     public void run() {
         try {
-            System.out.println(name + "ждёт");
+            System.out.println(name + " ждёт");
             callBox.acquire();
             System.out.println(name + " пользуется таксофоном");
             sleep(2000);
-            System.out.println(name + "завершил(а) звонок");
+            System.out.println(name + " завершил(а) звонок");
 
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
             callBox.release();
         }
-
     }
 }

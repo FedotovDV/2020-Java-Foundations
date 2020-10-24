@@ -6,7 +6,6 @@ public class AtomicIntegerExample {
 //    static int counter = 0;
     static AtomicInteger counter = new AtomicInteger(0);
 
-
     public static void increment() {
 //counter++;
         counter.incrementAndGet();
@@ -24,7 +23,6 @@ Thread thread1 = new Thread(new MyRunnableImpl220());
 }
 
 class MyRunnableImpl220 implements Runnable{
-
     @Override
     public void run() {
         for(int i = 0; i < 100; i++){

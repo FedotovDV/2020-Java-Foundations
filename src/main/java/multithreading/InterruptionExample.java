@@ -9,13 +9,11 @@ public class InterruptionExample {
         thread.interrupt();
         thread.join();
         System.out.println("main ends");
-
     }
 }
 
 class InterruptedThread extends Thread {
     double sqrtSum = 0;
-
     public void run() {
         for (int i = 1; i <= 1000000000; i++) {
             if (isInterrupted()) {
@@ -29,10 +27,8 @@ class InterruptedThread extends Thread {
             } catch (InterruptedException e) {
                 System.out.println("Поток хотят прервать во время сна, давайте завершим его работу");
                 return;
-
             }
         }
         System.out.println(sqrtSum);
     }
-
 }

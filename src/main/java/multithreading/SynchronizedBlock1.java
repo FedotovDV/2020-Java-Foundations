@@ -9,10 +9,7 @@ public class SynchronizedBlock1 {
         thread1.start();
         thread2.start();
         thread3.start();
-
-
     }
-
 }
 
 class Counter2 {
@@ -20,7 +17,6 @@ class Counter2 {
 }
 
 class MyRunnableImpl2 implements Runnable {
-
     public void doWork1() {
         System.out.println(Thread.currentThread().getName());
         synchronized (this) {
@@ -28,7 +24,6 @@ class MyRunnableImpl2 implements Runnable {
             System.out.println(Counter2.counter + " " + Thread.currentThread().getName());
         }
     }
-
     @Override
     public void run() {
         for (int i = 0; i < 3; i++) {
