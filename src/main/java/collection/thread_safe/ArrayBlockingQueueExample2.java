@@ -32,6 +32,5 @@ public class ArrayBlockingQueueExample2 {
                 }
             }
         }).start();
-
     }
 }

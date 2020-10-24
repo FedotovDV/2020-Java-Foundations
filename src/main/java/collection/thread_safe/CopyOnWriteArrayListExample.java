@@ -43,8 +43,5 @@ public class CopyOnWriteArrayListExample {
         thread1.join();
         thread2.join();
         System.out.println(list);
-
-
-
     }
 }
