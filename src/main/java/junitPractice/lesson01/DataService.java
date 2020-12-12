@@ -1,4 +1,4 @@
-package junitPractice;
+package junitPractice.lesson01;
 
 
 import java.util.Comparator;
