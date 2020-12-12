@@ -1,11 +1,11 @@
-package junitPractice;
+package junitPractice.lesson01;
+import junitPractice.lesson01.DataService;
 import org.junit.*;
 
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static org.junit.Assert.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DataServiceTest {
